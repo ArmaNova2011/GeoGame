@@ -298,7 +298,7 @@ backToMenuBtn.addEventListener('click', () => {
 });
 
 // --- ثبت رکورد در SheetDB ---
-const SHEETDB_URL = "https://sheetdb.io/api/v1/x2owtxnp0mwh6";
+const SHEETDB_URL = "https://sheetdb.io/api/v1/vrc427ka0tp2h";
 
 document.getElementById('submit-score-btn').addEventListener('click', function () {
     const nameInput = document.getElementById('player-name');
