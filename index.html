@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کوییز جغرافیای ایران</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- صفحه شروع بازی -->
+        <div id="start-screen" class="screen active">
+            <h1>جغرافیای ایران</h1>
+            <p>چقدر این کتاب رو خوب خوندی؟</p>
+            <button id="start-btn">شروع بازی</button>
+            <button id="dev-mode-btn" class="dev-btn">Developer Mode</button>
+        </div>
+
+        <!-- مودال رمز عبور -->
+        <div id="password-modal" class="modal">
+            <div class="modal-content">
+                <h2>ورود سازنده</h2>
+                <input type="password" id="dev-password" placeholder="رمز عبور...">
+                <div class="modal-buttons">
+                    <button id="submit-password">ورود</button>
+                    <button id="cancel-password">انصراف</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحه تنظیمات سازنده -->
+        <div id="dev-screen" class="screen">
+            <h1>Developer Mode</h1>
+            <p>به بخش مدیریت خوش آمدید.</p>
+            <button id="view-questions-btn">مشاهده لیست سوالات</button>
+            <button id="back-to-start-btn">بازگشت به منوی اصلی</button>
+        </div>
+
+        <!-- صفحه لیست سوالات -->
+        <div id="questions-list-screen" class="screen">
+            <h1>لیست سوالات</h1>
+            <div id="questions-list-container"></div>
+            <button id="back-to-dev-btn">بازگشت</button>
+        </div>
+
+        <!-- صفحه بازی -->
+        <div id="quiz-screen" class="screen">
+            <div class="header">
+                <span id="question-number">سوال ۱</span>
+                <span id="score">امتیاز: ۰</span>
+                <span id="lives">❤️❤️❤️</span>
+                <span id="timer" class="timer">۱۰</span>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">متن سوال اینجا قرار می‌گیرد</h2>
+            </div>
+            <div id="options-container" class="options-container">
+                <!-- گزینه‌ها به صورت داینامیک با جاوااسکریپت اضافه می‌شوند -->
+            </div>
+            <button id="next-btn" class="hide">سوال بعدی</button>
+        </div>
+
+        <!-- صفحه پایان بازی -->
+        <div id="end-screen" class="screen">
+            <h1>بازی تمام شد!</h1>
+            <p>امتیاز نهایی شما: <span id="final-score">۰</span></p>
+
+            <!-- فرم ثبت رکورد -->
+            <div id="record-form">
+                <input type="text" id="player-name" placeholder="اسمت رو بنویس..." maxlength="30">
+                <button id="submit-score-btn">ثبت رکورد</button>
+                <p id="record-message" style="color: #e74c3c; display: none;">اسمت رو خالی نذار!</p>
+            </div>
+
+            <!-- دکمه‌های برگشت -->
+            <button id="restart-btn">دوره بازی کن</button>
+            <button id="back-to-menu-btn" class="dev-btn">بازگشت به منوی اصلی</button>
+        </div>
+
+        <!-- آهنگ‌ها -->
+        <audio id="bgm-quiz" src="audio/ever_downward.mp3"></audio>
+        <audio id="sfx-end" src="audio/robotnik_clear.mp3"></audio>
+        <audio id="bgm-dev" src="audio/a_journey_in_modulating_time.mp3"></audio>
+
+    </div>
+
+    <!-- متن کپی‌رایت -->
+    <footer class="copyright">
+        Musics by: KartKerw (Dr. Robotnik's Ring Racers) - Fat Bard (Die in the dungeon)
+    </footer>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
